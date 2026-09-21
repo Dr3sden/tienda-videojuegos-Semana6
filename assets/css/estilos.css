@@ -1,0 +1,166 @@
+/* ============================================================
+   ESTILOS PERSONALIZADOS - LEVELUP STORE
+   ============================================================ */
+
+:root {
+    --color-primary: #1e1e2f;
+    --color-secondary: #2d2d44;
+    --color-accent: #ffc107;
+    --color-bg: #f4f4f9;
+}
+
+/* Estilos globales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar-brand img {
+    object-fit: contain;
+}
+
+.navbar .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-accent) !important;
+}
+
+.navbar .nav-link.active {
+    color: var(--color-accent) !important;
+    font-weight: 600;
+}
+
+/* Carrusel */
+.carousel-img {
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 15px 25px;
+}
+
+/* Cards de productos */
+.card-producto {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.card-producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-producto .card-img-top {
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-producto:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Precio */
+.precio {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #b8860b;
+}
+
+/* Carrito */
+#lista-carrito .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid var(--color-accent);
+}
+
+#lista-carrito .list-group-item .btn-eliminar {
+    color: #dc3545;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+}
+
+#lista-carrito .list-group-item .btn-eliminar:hover {
+    transform: scale(1.2);
+}
+
+/* Badge del carrito */
+#contador-carrito {
+    font-size: 0.75rem;
+    vertical-align: top;
+    margin-left: 2px;
+}
+
+/* Ofertas */
+.card.border-warning {
+    transition: transform 0.3s ease;
+}
+
+.card.border-warning:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--color-accent) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 300px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-producto .card-img-top {
+        height: 180px;
+    }
+
+    h1.display-4 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-img {
+        height: 200px;
+    }
+
+    .carousel-caption {
+        display: none !important;
+    }
+
+    .card-producto .card-img-top {
+        height: 160px;
+    }
+
+    h1.display-4 {
+        font-size: 1.5rem;
+    }
+
+    .precio {
+        font-size: 1.1rem;
+    }
+}

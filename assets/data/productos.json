@@ -1,0 +1,46 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Cyberpunk 2077",
+            "precio": 39990,
+            "descripcion": "Un RPG de mundo abierto en un futuro distópico. Vive la historia de V en Night City.",
+            "imagen": "assets/img/cyberpunk2077.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "Zelda: Tears of the Kingdom",
+            "precio": 49990,
+            "descripcion": "La secuela del aclamado Breath of the Wild. Explora los cielos y las profundidades de Hyrule.",
+            "imagen": "assets/img/zelda-totk.jpg"
+        },
+        {
+            "id": 3,
+            "nombre": "Red Dead Redemption 2",
+            "precio": 44990,
+            "descripcion": "Un épico western de mundo abierto. Vive la historia de Arthur Morgan y la banda de Dutch van der Linde.",
+            "imagen": "assets/img/red-dead-redemption2.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "Super Mario Bros. Wonder",
+            "precio": 44990,
+            "descripcion": "Una nueva aventura 2D de Mario llena de sorpresas y transformaciones.",
+            "imagen": "assets/img/mario-wonder.jpg"
+        },
+        {
+            "id": 5,
+            "nombre": "Hogwarts Legacy",
+            "precio": 42990,
+            "descripcion": "Vive tu propia historia en el mundo mágico de Harry Potter. Explora Hogwarts y más allá.",
+            "imagen": "assets/img/hogwarts-legacy.jpg"
+        },
+        {
+            "id": 6,
+            "nombre": "Spider-Man 2",
+            "precio": 47990,
+            "descripcion": "Peter Parker y Miles Morales se unen para enfrentar nuevas amenazas en Nueva York.",
+            "imagen": "assets/img/spider-man-2.jpg"
+        }
+    ]
+}
