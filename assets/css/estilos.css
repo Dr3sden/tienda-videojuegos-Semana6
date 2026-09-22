@@ -1,5 +1,5 @@
 /* ============================================================
-   ESTILOS PERSONALIZADOS - LEVELUP STORE
+   ESTILOS PERSONALIZADOS - LEVELUP STORE (S6)
    ============================================================ */
 
 :root {
@@ -9,7 +9,6 @@
     --color-bg: #f4f4f9;
 }
 
-/* Estilos globales */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--color-bg);
@@ -26,12 +25,12 @@ body {
     transition: color 0.3s ease;
 }
 
-.navbar .nav-link:hover {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
     color: var(--color-accent) !important;
 }
 
 .navbar .nav-link.active {
-    color: var(--color-accent) !important;
     font-weight: 600;
 }
 
