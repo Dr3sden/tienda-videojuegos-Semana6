@@ -16,7 +16,10 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Navbar */
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+
 .navbar-brand img {
     object-fit: contain;
 }
@@ -34,7 +37,10 @@ body {
     font-weight: 600;
 }
 
-/* Carrusel */
+/* ============================================================
+   CARRUSEL
+   ============================================================ */
+
 .carousel-img {
     height: 450px;
     object-fit: cover;
@@ -47,7 +53,10 @@ body {
     padding: 15px 25px;
 }
 
-/* Cards de productos */
+/* ============================================================
+   CARDS DE PRODUCTOS
+   ============================================================ */
+
 .card-producto {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
@@ -70,14 +79,20 @@ body {
     transform: scale(1.05);
 }
 
-/* Precio */
+/* ============================================================
+   PRECIO
+   ============================================================ */
+
 .precio {
     font-size: 1.3rem;
     font-weight: 700;
     color: #b8860b;
 }
 
-/* Carrito */
+/* ============================================================
+   CARRITO
+   ============================================================ */
+
 #lista-carrito .list-group-item {
     display: flex;
     justify-content: space-between;
@@ -98,14 +113,16 @@ body {
     transform: scale(1.2);
 }
 
-/* Badge del carrito */
 #contador-carrito {
     font-size: 0.75rem;
     vertical-align: top;
     margin-left: 2px;
 }
 
-/* Ofertas */
+/* ============================================================
+   OFERTAS
+   ============================================================ */
+
 .card.border-warning {
     transition: transform 0.3s ease;
 }
@@ -114,7 +131,10 @@ body {
     transform: translateY(-5px);
 }
 
-/* Footer */
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
 footer a {
     transition: color 0.3s ease;
 }
@@ -123,7 +143,41 @@ footer a:hover {
     color: var(--color-accent) !important;
 }
 
-/* Responsive */
+/* ============================================================
+   MODAL DE DETALLE DE PRODUCTO
+   ============================================================ */
+
+#modalProducto .modal-body {
+    padding: 25px;
+}
+
+#modalProductoImagen {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+#modalProductoDescripcion {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#modalProductoPrecio {
+    color: #b8860b;
+    font-weight: 700;
+    font-size: 1.8rem;
+    border-top: 2px solid #ffc107;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
 @media (max-width: 768px) {
     .carousel-img {
         height: 300px;
@@ -161,5 +215,13 @@ footer a:hover {
 
     .precio {
         font-size: 1.1rem;
+    }
+
+    #modalProductoDescripcion {
+        text-align: left;
+    }
+
+    #modalProductoPrecio {
+        font-size: 1.5rem;
     }
 }
