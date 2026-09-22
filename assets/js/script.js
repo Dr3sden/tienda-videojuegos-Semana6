@@ -2,12 +2,18 @@
    SCRIPT PRINCIPAL - LEVELUP STORE (S6)
    ============================================================ */
 
-// Variables globales
+// ============================================================
+// VARIABLES GLOBALES
+// ============================================================
+
 let productos = [];
 let carrito = [];
 let total = 0;
 
-// Selección de elementos del DOM
+// ============================================================
+// SELECCIÓN DE ELEMENTOS DEL DOM
+// ============================================================
+
 const contenedorProductos = document.getElementById('contenedor-productos');
 const cargando = document.getElementById('cargando');
 const errorCarga = document.getElementById('error-carga');
@@ -50,7 +56,7 @@ async function cargarProductos() {
 }
 
 // ============================================================
-// RENDERIZAR PRODUCTOS
+// RENDERIZAR PRODUCTOS EN EL DOM
 // ============================================================
 
 function renderizarProductos(listaProductos) {
@@ -74,7 +80,7 @@ function renderizarProductos(listaProductos) {
                 <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x220/1e1e2f/ffc107?text=LevelUp'">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${producto.nombre}</h5>
-                    <p class="card-text text-muted small">${producto.descripcion}</p>
+                    <p class="card-text text-muted small">${producto.descripcionCorta}</p>
                     <div class="mt-auto d-flex justify-content-between align-items-center">
                         <span class="precio">$${producto.precio.toLocaleString('es-CL')}</span>
                         <div class="d-flex gap-1">
@@ -108,7 +114,7 @@ function renderizarProductos(listaProductos) {
 }
 
 // ============================================================
-// EVENTOS AGREGAR AL CARRITO
+// EVENTOS: AGREGAR AL CARRITO (click)
 // ============================================================
 
 function asignarEventosAgregar() {
@@ -137,7 +143,7 @@ function asignarEventosAgregar() {
 }
 
 // ============================================================
-// EVENTOS VER DETALLE (MODAL BOOTSTRAP)
+// EVENTOS: VER DETALLE
 // ============================================================
 
 function asignarEventosVerDetalle() {
@@ -150,7 +156,7 @@ function asignarEventosVerDetalle() {
                 document.getElementById('modalProductoLabel').textContent = producto.nombre;
                 document.getElementById('modalProductoImagen').src = producto.imagen;
                 document.getElementById('modalProductoImagen').alt = producto.nombre;
-                document.getElementById('modalProductoDescripcion').textContent = producto.descripcion;
+                document.getElementById('modalProductoDescripcion').textContent = producto.descripcionLarga;
                 document.getElementById('modalProductoPrecio').textContent = `$${producto.precio.toLocaleString('es-CL')}`;
             }
         });
@@ -169,7 +175,7 @@ function agregarAlCarrito(id, nombre, precio) {
 }
 
 // ============================================================
-// ACTUALIZAR CARRITO
+// ACTUALIZAR VISUALIZACIÓN DEL CARRITO
 // ============================================================
 
 function actualizarCarrito() {
@@ -204,7 +210,7 @@ function actualizarCarrito() {
 }
 
 // ============================================================
-// EVENTOS ELIMINAR
+// EVENTOS: ELIMINAR DEL CARRITO (click)
 // ============================================================
 
 function asignarEventosEliminar() {
@@ -231,7 +237,7 @@ function vaciarCarrito() {
 }
 
 // ============================================================
-// BUSCAR PRODUCTOS (EVENTO SUBMIT)
+// BUSCAR PRODUCTOS (evento submit)
 // ============================================================
 
 function buscarProductos(e) {
@@ -260,7 +266,7 @@ function buscarProductos(e) {
 }
 
 // ============================================================
-// NEWSLETTER (EVENTO SUBMIT)
+// NEWSLETTER (evento submit)
 // ============================================================
 
 function procesarNewsletter(e) {
@@ -270,7 +276,7 @@ function procesarNewsletter(e) {
 }
 
 // ============================================================
-// FINALIZAR COMPRA (MODAL BOOTSTRAP)
+// FINALIZAR COMPRA 
 // ============================================================
 
 function finalizarCompra() {
@@ -289,7 +295,7 @@ function finalizarCompra() {
 }
 
 // ============================================================
-// LOCALSTORAGE
+// LOCALSTORAGE - Persistir carrito
 // ============================================================
 
 function guardarCarrito() {
@@ -315,7 +321,6 @@ function cargarCarritoGuardado() {
 formBusqueda.addEventListener('submit', buscarProductos);
 formNewsletter.addEventListener('submit', procesarNewsletter);
 btnVaciarCarrito.addEventListener('click', vaciarCarrito);
-
 
 const modalCompra = document.getElementById('modalCompra');
 modalCompra.addEventListener('show.bs.modal', finalizarCompra);
