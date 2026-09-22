@@ -4,42 +4,48 @@
             "id": 1,
             "nombre": "Cyberpunk 2077",
             "precio": 39990,
-            "descripcion": "Un RPG de mundo abierto en un futuro distópico. Vive la historia de V en Night City.",
+            "descripcionCorta": "Un RPG de mundo abierto en un futuro distópico. Vive la historia de V en Night City.",
+            "descripcionLarga": "Sumérgete en Night City, una megalópolis obsesionada con el poder, el glamour y las modificaciones corporales. Encarna a V, un mercenario que busca un implante único que otorga la inmortalidad. Personaliza tu personaje, mejora tus habilidades y forja alianzas con personajes inolvidables como Johnny Silverhand (Keanu Reeves). Con múltiples finales, decisiones morales complejas y un mundo abierto lleno de secretos, Cyberpunk 2077 es una experiencia RPG única que redefine el género.",
             "imagen": "assets/img/cyberpunk2077.jpg"
         },
         {
             "id": 2,
             "nombre": "Zelda: Tears of the Kingdom",
             "precio": 49990,
-            "descripcion": "La secuela del aclamado Breath of the Wild. Explora los cielos y las profundidades de Hyrule.",
+            "descripcionCorta": "La secuela del aclamado Breath of the Wild. Explora los cielos y las profundidades de Hyrule.",
+            "descripcionLarga": "La esperada secuela de Breath of the Wild te lleva de vuelta a Hyrule, pero ahora con nuevos poderes que revolucionan la exploración. Utiliza las habilidades de ultra mano, fusión y construcción para resolver puzzles, crear vehículos y enfrentar enemigos de formas nunca antes vistas. Explora los cielos flotantes, las profundidades subterráneas y un mapa que triplica el tamaño del original. Con una narrativa épica, mazmorras creativas y libertad total, esta aventura redefine lo que un mundo abierto puede ofrecer.",
             "imagen": "assets/img/zelda-totk.jpg"
         },
         {
             "id": 3,
             "nombre": "Red Dead Redemption 2",
             "precio": 44990,
-            "descripcion": "Un épico western de mundo abierto. Vive la historia de Arthur Morgan y la banda de Dutch van der Linde.",
+            "descripcionCorta": "Un épico western de mundo abierto. Vive la historia de Arthur Morgan y la banda de Dutch van der Linde.",
+            "descripcionLarga": "Vive la épica historia de Arthur Morgan y la banda de Dutch van der Linde en el ocaso del Salvaje Oeste. Un mundo abierto inmersivo con una narrativa profunda, personajes inolvidables y un ecosistema vivo que reacciona a tus decisiones. Caza, pesca, roba, explora y sobrevive en un mundo donde la ley y el honor chocan constantemente. Con más de 60 horas de contenido principal, un modo online con RDR Online y uno de los apartados técnicos más impresionantes de la generación, es considerado uno de los mejores videojuegos de la historia.",
             "imagen": "assets/img/red-dead-redemption2.jpg"
         },
         {
             "id": 4,
             "nombre": "Super Mario Bros. Wonder",
             "precio": 44990,
-            "descripcion": "Una nueva aventura 2D de Mario llena de sorpresas y transformaciones.",
+            "descripcionCorta": "Una nueva aventura 2D de Mario llena de sorpresas y transformaciones.",
+            "descripcionLarga": "La nueva entrega 2D de Mario llega con una revolución: la flor maravilla. Transforma los niveles con efectos sorprendentes, como tuberías que cobran vida, plataformas que cambian de forma, enemigos que se multiplican y mucho más. Juega con Mario, Luigi, Peach, Daisy, Toad y nuevos personajes como Yoshi y Nabbit, cada uno con habilidades únicas. Con un multijugador local para 4 jugadores, niveles creativos y una banda sonora inolvidable, Wonder es la aventura 2D más innovadora de la saga en décadas.",
             "imagen": "assets/img/mario-wonder.jpg"
         },
         {
             "id": 5,
             "nombre": "Hogwarts Legacy",
             "precio": 42990,
-            "descripcion": "Vive tu propia historia en el mundo mágico de Harry Potter. Explora Hogwarts y más allá.",
+            "descripcionCorta": "Vive tu propia historia en el mundo mágico de Harry Potter. Explora Hogwarts y más allá.",
+            "descripcionLarga": "Haz realidad tu sueño de ser un mago en el mundo mágico de Harry Potter. Ambientado en el siglo XIX, este RPG de acción te permite crear tu propio personaje, asistir a clases en Hogwarts, aprender hechizos, preparar pociones y domar criaturas mágicas. Explora el castillo, Hogsmeade, el Bosque Prohibido y descubre secretos olvidados. Con un sistema de combate dinámico, decisiones morales y una historia original escrita en colaboración con J.K. Rowling, Hogwarts Legacy es la experiencia definitiva para los fans del mundo mágico.",
             "imagen": "assets/img/hogwarts-legacy.jpg"
         },
         {
             "id": 6,
             "nombre": "Spider-Man 2",
             "precio": 47990,
-            "descripcion": "Peter Parker y Miles Morales se unen para enfrentar nuevas amenazas en Nueva York.",
+            "descripcionCorta": "Peter Parker y Miles Morales se unen para enfrentar nuevas amenazas en Nueva York.",
+            "descripcionLarga": "Peter Parker y Miles Morales unen fuerzas para enfrentar la amenaza de Venom y otros villanos icónicos como Kraven el Cazador y el Lagarto en una Nueva York expandida. Con un sistema de combate mejorado, nuevos movimientos, telarañas más dinámicas y la posibilidad de cambiar entre ambos héroes en tiempo real, la acción es más intensa que nunca. Una historia emocionante que explora el sacrificio, la responsabilidad y el equilibrio entre la vida personal y el deber heroico. Una aventura épica exclusiva de PlayStation 5.",
             "imagen": "assets/img/spider-man-2.jpg"
         }
     ]
