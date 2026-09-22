@@ -1,20 +1,13 @@
 /* ============================================================
-   SCRIPT PRINCIPAL - LEVELUP STORE
-   Semana 6: Optimización con Bootstrap 5 y JavaScript
+   SCRIPT PRINCIPAL - LEVELUP STORE (S6)
    ============================================================ */
 
-// ============================================================
-// VARIABLES GLOBALES
-// ============================================================
-
+// Variables globales
 let productos = [];
 let carrito = [];
 let total = 0;
 
-// ============================================================
-// SELECCIÓN DE ELEMENTOS DEL DOM
-// ============================================================
-
+// Selección de elementos del DOM
 const contenedorProductos = document.getElementById('contenedor-productos');
 const cargando = document.getElementById('cargando');
 const errorCarga = document.getElementById('error-carga');
@@ -22,7 +15,6 @@ const listaCarrito = document.getElementById('lista-carrito');
 const totalCarrito = document.getElementById('total-carrito');
 const contadorCarrito = document.getElementById('contador-carrito');
 const btnVaciarCarrito = document.getElementById('btn-vaciar-carrito');
-const btnFinalizarCompra = document.getElementById('btn-finalizar-compra');
 const formBusqueda = document.getElementById('form-busqueda');
 const inputBusqueda = document.getElementById('input-busqueda');
 const mensajeBusqueda = document.getElementById('mensaje-busqueda');
@@ -30,7 +22,7 @@ const formNewsletter = document.getElementById('form-newsletter');
 const mensajeCompra = document.getElementById('mensaje-compra');
 
 // ============================================================
-// FUNCIÓN: Cargar productos desde JSON con Fetch API
+// FETCH API - Cargar productos desde JSON
 // ============================================================
 
 async function cargarProductos() {
@@ -58,7 +50,7 @@ async function cargarProductos() {
 }
 
 // ============================================================
-// FUNCIÓN: Renderizar productos en el DOM
+// RENDERIZAR PRODUCTOS
 // ============================================================
 
 function renderizarProductos(listaProductos) {
@@ -79,7 +71,7 @@ function renderizarProductos(listaProductos) {
 
         col.innerHTML = `
             <div class="card card-producto border-0 shadow-sm">
-                <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}" loading="lazy">
+                <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x220/1e1e2f/ffc107?text=LevelUp'">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${producto.nombre}</h5>
                     <p class="card-text text-muted small">${producto.descripcion}</p>
@@ -116,13 +108,11 @@ function renderizarProductos(listaProductos) {
 }
 
 // ============================================================
-// FUNCIÓN: Asignar evento click a los botones "Agregar"
+// EVENTOS AGREGAR AL CARRITO
 // ============================================================
 
 function asignarEventosAgregar() {
-    const botonesAgregar = document.querySelectorAll('.btn-agregar');
-
-    botonesAgregar.forEach(boton => {
+    document.querySelectorAll('.btn-agregar').forEach(boton => {
         boton.addEventListener('click', () => {
             const id = parseInt(boton.getAttribute('data-id'));
             const nombre = boton.getAttribute('data-nombre');
@@ -147,13 +137,11 @@ function asignarEventosAgregar() {
 }
 
 // ============================================================
-// FUNCIÓN: Asignar evento click a los botones "Ver Detalle"
+// EVENTOS VER DETALLE (MODAL BOOTSTRAP)
 // ============================================================
 
 function asignarEventosVerDetalle() {
-    const botonesDetalle = document.querySelectorAll('.btn-ver-detalle');
-
-    botonesDetalle.forEach(boton => {
+    document.querySelectorAll('.btn-ver-detalle').forEach(boton => {
         boton.addEventListener('click', () => {
             const id = parseInt(boton.getAttribute('data-id'));
             const producto = productos.find(p => p.id === id);
@@ -170,19 +158,18 @@ function asignarEventosVerDetalle() {
 }
 
 // ============================================================
-// FUNCIÓN: Agregar producto al carrito
+// AGREGAR AL CARRITO
 // ============================================================
 
 function agregarAlCarrito(id, nombre, precio) {
-    const producto = { id, nombre, precio };
-    carrito.push(producto);
+    carrito.push({ id, nombre, precio });
     total += precio;
     guardarCarrito();
     actualizarCarrito();
 }
 
 // ============================================================
-// FUNCIÓN: Actualizar la visualización del carrito
+// ACTUALIZAR CARRITO
 // ============================================================
 
 function actualizarCarrito() {
@@ -217,13 +204,11 @@ function actualizarCarrito() {
 }
 
 // ============================================================
-// FUNCIÓN: Asignar evento click a los botones "Eliminar"
+// EVENTOS ELIMINAR
 // ============================================================
 
 function asignarEventosEliminar() {
-    const botonesEliminar = document.querySelectorAll('.btn-eliminar');
-
-    botonesEliminar.forEach(boton => {
+    document.querySelectorAll('.btn-eliminar').forEach(boton => {
         boton.addEventListener('click', () => {
             const index = parseInt(boton.getAttribute('data-index'));
             eliminarDelCarrito(index);
@@ -231,20 +216,12 @@ function asignarEventosEliminar() {
     });
 }
 
-// ============================================================
-// FUNCIÓN: Eliminar producto del carrito
-// ============================================================
-
 function eliminarDelCarrito(index) {
     total -= carrito[index].precio;
     carrito.splice(index, 1);
     guardarCarrito();
     actualizarCarrito();
 }
-
-// ============================================================
-// FUNCIÓN: Vaciar carrito
-// ============================================================
 
 function vaciarCarrito() {
     carrito = [];
@@ -254,12 +231,11 @@ function vaciarCarrito() {
 }
 
 // ============================================================
-// FUNCIÓN: Buscar productos
+// BUSCAR PRODUCTOS (EVENTO SUBMIT)
 // ============================================================
 
 function buscarProductos(e) {
     e.preventDefault();
-
     const termino = inputBusqueda.value.trim().toLowerCase();
 
     if (termino === '') {
@@ -284,7 +260,7 @@ function buscarProductos(e) {
 }
 
 // ============================================================
-// FUNCIÓN: Procesar newsletter
+// NEWSLETTER (EVENTO SUBMIT)
 // ============================================================
 
 function procesarNewsletter(e) {
@@ -294,7 +270,7 @@ function procesarNewsletter(e) {
 }
 
 // ============================================================
-// FUNCIÓN: Procesar finalización de compra
+// FINALIZAR COMPRA (MODAL BOOTSTRAP)
 // ============================================================
 
 function finalizarCompra() {
@@ -306,7 +282,6 @@ function finalizarCompra() {
             <strong>Total: $${total.toLocaleString('es-CL')}</strong><br>
             <small class="text-muted">Recibirás un correo con los detalles.</small>
         `;
-        // Vaciar carrito después de la compra
         setTimeout(() => {
             vaciarCarrito();
         }, 2000);
@@ -314,17 +289,13 @@ function finalizarCompra() {
 }
 
 // ============================================================
-// FUNCIÓN: Guardar carrito en localStorage
+// LOCALSTORAGE
 // ============================================================
 
 function guardarCarrito() {
     localStorage.setItem('carrito', JSON.stringify(carrito));
     localStorage.setItem('total', total);
 }
-
-// ============================================================
-// FUNCIÓN: Cargar carrito desde localStorage
-// ============================================================
 
 function cargarCarritoGuardado() {
     const carritoGuardado = localStorage.getItem('carrito');
@@ -344,7 +315,10 @@ function cargarCarritoGuardado() {
 formBusqueda.addEventListener('submit', buscarProductos);
 formNewsletter.addEventListener('submit', procesarNewsletter);
 btnVaciarCarrito.addEventListener('click', vaciarCarrito);
-btnFinalizarCompra.addEventListener('click', finalizarCompra);
+
+
+const modalCompra = document.getElementById('modalCompra');
+modalCompra.addEventListener('show.bs.modal', finalizarCompra);
 
 // ============================================================
 // INICIALIZACIÓN
